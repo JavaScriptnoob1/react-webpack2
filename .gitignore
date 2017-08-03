@@ -1,0 +1,4 @@
+node_modules/
+dist/
+lib/manifest.json
+lib/vendor.dll.js
