@@ -1,7 +1,6 @@
 import webpack from 'webpack';
 import Koa from 'koa';
 import { devMiddleware, hotMiddleware } from 'koa-webpack-middleware';
-// import BodyParser from 'koa-bodyparser';
 import devConfig from '../webpack.config.dev';
 const compile = webpack(devConfig);
 
