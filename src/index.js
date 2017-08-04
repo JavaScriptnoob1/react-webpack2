@@ -19,7 +19,5 @@ render(App);
 
 // 模块热替换的 API
 if (module.hot) {
-  module.hot.accept('./components/App', () => {
-    render(App);
-  });
+  module.hot.accept();
 }

@@ -8,9 +8,8 @@ const ROOT_PATH = resolve(__dirname);
 module.exports = {
   entry: {
     main: [
-      'react-hot-loader/patch',
-      'webpack-dev-server/client?http://localhost:8080',
-      'webpack/hot/only-dev-server',
+      'eventsource-polyfill',
+      'webpack-hot-middleware/client',
       './index.js',
     ],
   },
@@ -28,6 +27,24 @@ module.exports = {
     hot: true,
     contentBase: resolve(ROOT_PATH, 'dist'),
     publicPath: '/',
+    headers: { 
+      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept'
+    },
+    // display no info to console (only warnings and errors)
+    noInfo: false,
+    
+    // watch options (only lazy: false)
+    watchOptions: {
+      aggregateTimeout: 300,
+      poll: 1000
+    },
+
+    // options for formating the statistics
+    stats: {
+      colors: true,
+      timings: true
+    }
   },
 
   module: {
