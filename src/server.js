@@ -2,7 +2,7 @@ import webpack from 'webpack';
 import Koa from 'koa';
 import { devMiddleware, hotMiddleware } from 'koa-webpack-middleware';
 import devConfig from '../webpack.config.dev';
-import port from '../config/server';
+import { port } from '../config/server';
 
 const compile = webpack(devConfig);
 
