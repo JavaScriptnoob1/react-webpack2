@@ -32,16 +32,12 @@ module.exports = {
       'Access-Control-Allow-Origin': '*',
       'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept',
     },
-    // display no info to console (only warnings and errors)
-    noInfo: false,
-
-    // watch options (only lazy: false)
+    historyApiFallback: true,
+    noInfo: true,
     watchOptions: {
       aggregateTimeout: 300,
       poll: 1000,
     },
-
-    // options for formating the statistics
     stats: {
       colors: true,
       timings: true,

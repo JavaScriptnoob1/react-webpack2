@@ -3,6 +3,7 @@ import Koa from 'koa';
 import { devMiddleware, hotMiddleware } from 'koa-webpack-middleware';
 import devConfig from '../webpack.config.dev';
 import { port } from '../config/server';
+// import opn from 'opn';
 
 const compile = webpack(devConfig);
 
@@ -15,4 +16,8 @@ app.use(hotMiddleware(compile, {
   log: console.log,
 }));
 
-app.listen(port);
+app.listen(port, () => {
+  console.log(`Listening at http://localhost:${port}`);
+  // const uri = `http://localhost:${port}`;
+  // opn(uri);
+});
