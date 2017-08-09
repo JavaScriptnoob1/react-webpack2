@@ -20,6 +20,7 @@ module.exports = {
     "import/no-unresolved": 0,
     "import/no-extraneous-dependencies": 0,
     "linebreak-style": 0,
-    "react/jsx-filename-extension": 0
+    "react/jsx-filename-extension": 0,
+    "max-len": [2, 150, 2]
   },
 };
