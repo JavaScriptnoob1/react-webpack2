@@ -5,6 +5,7 @@ const ROOT_PATH = path.resolve(__dirname);
 const vendors = [
 //   'antd',
 //   'isomorphic-fetch',
+  'lodash',
   'react',
   'react-dom',
 //   'react-redux',
